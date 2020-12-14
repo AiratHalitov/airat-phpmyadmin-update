@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# help: https://www.dmosk.ru/miniinstruktions.php?mini=phpmyadmin-update
-
 # don't forget update version!
 VER=5.0.4
 FNAME=phpMyAdmin-$VER-all-languages
