@@ -3,9 +3,9 @@
 
 ## Установка и запуск:
 ```bash
-wget https://raw.githubusercontent.com/AiratHalitov/airat-phpmyadmin-update/main/airat-phpmyadmin-update.sh
+git clone https://github.com/AiratHalitov/airat-phpmyadmin-update
 
-chmod +x airat-phpmyadmin-update.sh
+cd airat-phpmyadmin-update
 
 sudo ./airat-phpmyadmin-update.sh
 ```
