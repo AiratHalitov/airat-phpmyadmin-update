@@ -3,6 +3,7 @@
 # don't forget update version!
 VER=5.0.4
 FNAME=phpMyAdmin-$VER-all-languages
+PMADIR=/usr/share/phpmyadmin
 
 rm -rf $FNAME
 rm -rf $FNAME.zip
@@ -12,11 +13,11 @@ wget https://files.phpmyadmin.net/phpMyAdmin/$VER/$FNAME.zip
 if [ -f $FNAME.zip ]; then
     unzip $FNAME.zip && rm -rf $FNAME.zip
 
-    if [ -d /usr/share/phpmyadmin ]; then
-        mv /usr/share/phpmyadmin /usr/share/phpmyadmin.backup-$RANDOM
-        mv $FNAME /usr/share/phpmyadmin
+    if [ -d $PMADIR ]; then
+        mv $PMADIR $PMADIR.backup-$RANDOM
+        mv $FNAME $PMADIR
 
-        cd /usr/share/phpmyadmin
+        cd $PMADIR
         mkdir tmp && chmod 777 tmp -R
 
         cp config.sample.inc.php config.inc.php
