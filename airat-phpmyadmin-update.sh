@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Author: Airat Halitov
+# GitHub: https://github.com/AiratHalitov/airat-phpmyadmin-update
+# License: GPLv3
+
 # don't forget update version!
 VER=5.0.4
 FNAME=phpMyAdmin-$VER-all-languages
