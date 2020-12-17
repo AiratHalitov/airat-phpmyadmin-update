@@ -1,5 +1,5 @@
 # airat-phpmyadmin-update
-Скрипт для быстрого обновления `phpmyadmin` на сервере
+Скрипт для быстрого обновления [phpmyadmin](https://www.phpmyadmin.net/) на сервере
 
 ## Установка и запуск:
 ```bash
