@@ -18,13 +18,13 @@ if [ -f $FNAME.zip ]; then
     unzip $FNAME.zip > /dev/null 2>&1 && rm -rf $FNAME.zip
 
     if [ -d $PMADIR ]; then
-        mv $PMADIR $PMADIR.backup-$RANDOM
-        mv $FNAME $PMADIR
+        sudo mv $PMADIR $PMADIR.backup-$RANDOM
+        sudo mv $FNAME $PMADIR
 
         cd $PMADIR
-        mkdir tmp && chmod 777 tmp -R
+        sudo mkdir tmp && sudo chmod 777 tmp -R
 
-        cp config.sample.inc.php config.inc.php
+        sudo cp config.sample.inc.php config.inc.php
 
         # edit line in file config.inc.php (generate key):
         # $cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
@@ -33,7 +33,7 @@ if [ -f $FNAME.zip ]; then
         SRC="blowfish_secret'] = '';"
         DST="blowfish_secret'] = '$KEY';"
 
-        sed "s/$SRC/$DST/g" -i config.inc.php
+        sudo sed "s/$SRC/$DST/g" -i config.inc.php
         echo "Done!"
     fi
 fi
