@@ -12,10 +12,10 @@ PMADIR=/usr/share/phpmyadmin
 rm -rf $FNAME
 rm -rf $FNAME.zip
 
-wget https://files.phpmyadmin.net/phpMyAdmin/$VER/$FNAME.zip > /dev/null 2>&1
+wget https://files.phpmyadmin.net/phpMyAdmin/$VER/$FNAME.zip &> /dev/null
 
 if [ -f $FNAME.zip ]; then
-    unzip $FNAME.zip > /dev/null 2>&1 && rm -rf $FNAME.zip
+    unzip $FNAME.zip &> /dev/null && rm -rf $FNAME.zip
 
     if [ -d $PMADIR ]; then
         sudo mv $PMADIR $PMADIR.backup-$RANDOM
