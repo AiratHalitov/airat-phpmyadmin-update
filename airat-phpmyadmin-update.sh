@@ -5,7 +5,7 @@
 # License: GPLv3
 
 # don't forget update version!
-VER=5.1.0
+VER=5.1.1
 FNAME=phpMyAdmin-$VER-all-languages
 PMADIR=/usr/share/phpmyadmin
 
